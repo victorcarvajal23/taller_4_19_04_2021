@@ -61,10 +61,7 @@ if ((cliente=="MIGUEL"&&dinero==1000) || (cliente=="CARLOS"&&dinero==2000)||( cl
             seleccion2[conta]=codigoHelados[i]
         }   
     }
-}
-else{
-    alert("usuario invalido")
-}
+
 console.log("dinero "+dinero)
 console.log("cliente "+cliente)
     //seleccionar helado
@@ -77,15 +74,19 @@ let valida2=Number.isInteger(codigo)
     
    
 } */
-if (valida2==true ) {
-    let vueltos
-    vueltos=dinero-valorF[codigo]
-    console.log(`compro un (${seleccion[codigo]}) por un valor de ${valorF[codigo]} y le sobro ${vueltos}`)
+    if (valida2==true ) {
+        let vueltos
+        vueltos=dinero-valorF[codigo]
+        console.log(`compro un (${seleccion[codigo]}) por un valor de ${valorF[codigo]} y le sobro ${vueltos}`)
 
-    inicio3=false
+        inicio3=false
+    }
+    else {
+    alert("ingrese un codigo valido")
+    inicio3=true
+    }
 }
-else {
-alert("ingrese un codigo valido")
-inicio3=true
 }
+else{
+    alert("Ese usurio no tiene ese dinero")
 }
