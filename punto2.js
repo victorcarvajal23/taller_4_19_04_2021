@@ -73,23 +73,16 @@ while(inicio3==true){
 
 codigo=parseInt( prompt(`puede comprar  \n${seleccion}\nIngrese el codigo del producto que desea comprar`))
 let valida2=Number.isInteger(codigo)
-
-if (valida2==true ) {
-    for (let i = 0; i < seleccion2.length; i++) {
-        if (valida2==seleccion2[i]) {
-            let vueltos
-            vueltos=dinero-valorF[codigo]
-            console.log(`compro un (${seleccion[codigo]}) por un valor de ${valorF[codigo]} y le sobro ${vueltos}`)
-        
-            inicio3=false
-            
-        }
-        else{
-            alert("ingrese un codigo valido")
-            inicio3=true 
-        }
+/* for (let i = 0; i < seleccion2.length; i++) {
     
-    }
+   
+} */
+if (valida2==true ) {
+    let vueltos
+    vueltos=dinero-valorF[codigo]
+    console.log(`compro un (${seleccion[codigo]}) por un valor de ${valorF[codigo]} y le sobro ${vueltos}`)
+
+    inicio3=false
 }
 else {
 alert("ingrese un codigo valido")
