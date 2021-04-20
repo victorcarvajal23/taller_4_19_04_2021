@@ -27,9 +27,11 @@ let seleccion2=[]
 let valorF=[]
 let conta=0
 let codigo
+let contenedor
+let contenedor2
 
 let precios=[400,1000,2200,1500,2500,2800,2000]
-let nombres=["1.bonais","2.Palito de helado de agua","3.Palito de helado de crema","4.Bombón helado con arequipe","5.Bombón helado con chispas de chocolate","6.Bombón helado con fresas","7.Medio litro de helado"]
+let nombres=[" 1.Bonais"," 2.Palito de helado de agua"," 3.Palito de helado de crema"," 4.Bombón helado con arequipe"," 5.Bombón helado con chispas de chocolate"," 6.Bombón helado con fresas"," 7.Medio litro de helado"]
 let codigoHelados=[1,2,3,4,5,6,7]
 while(inicio==true){
 dinero=parseInt(prompt("Ingrese la cantidad de dinero"))
@@ -61,32 +63,39 @@ if ((cliente=="MIGUEL"&&dinero==1000) || (cliente=="CARLOS"&&dinero==2000)||( cl
             seleccion2[conta]=codigoHelados[i]
         }   
     }
+    console.log("Dinero "+dinero)
+    console.log("Cliente "+cliente)
+        //seleccionar helado
 
-console.log("dinero "+dinero)
-console.log("cliente "+cliente)
-    //seleccionar helado
+    while(inicio3==true){
 
-while(inicio3==true){
-
-codigo=parseInt( prompt(`puede comprar  \n${seleccion}\nIngrese el codigo del producto que desea comprar`))
-let valida2=Number.isInteger(codigo)
-/* for (let i = 0; i < seleccion2.length; i++) {
-    
-   
-} */
-    if (valida2==true ) {
-        let vueltos
-        vueltos=dinero-valorF[codigo]
-        console.log(`compro un (${seleccion[codigo]}) por un valor de ${valorF[codigo]} y le sobro ${vueltos}`)
-
-        inicio3=false
+    codigo=parseInt( prompt(`Puede comprar \n${seleccion}\nIngrese el codigo del producto que desea comprar`))
+    let valida2=Number.isInteger(codigo)
+        if (valida2==true ) {
+            for (let i = 0; i < seleccion2.length; i++) {
+                if (codigo==seleccion2[i]) {
+                    contenedor=seleccion2[i]
+                    contenedor2=valorF[i]
+                }
+            }
+            if (contenedor==codigo) {   
+                let vueltos
+                vueltos=dinero-contenedor2
+                console.log(`compro un (${nombres[contenedor-1]}) por un valor de ${contenedor2} y le sobro ${vueltos}`)
+                inicio3=false
+            }
+            else{
+                alert("ingrese un codigo valido")
+                valida2=true
+            }         
+        }
+        else {
+        alert("ingrese un codigo valido")
+        inicio3=true
+        }
     }
-    else {
-    alert("ingrese un codigo valido")
-    inicio3=true
-    }
-}
 }
 else{
     alert("Ese usurio no tiene ese dinero")
 }
+
