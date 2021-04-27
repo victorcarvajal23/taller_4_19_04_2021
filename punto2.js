@@ -33,8 +33,8 @@ let max
 let max2=[]
 
 let precios=[400,1000,2200,1500,2500,2800,2000]
-let nombres=["Bonais","Palito de helado de agua","Palito de helado de crema","Bombón helado con arequipe","Bombón helado con chispas de chocolate","Bombón helado con fresas","Medio litro de helado"]
-//let nombres=[" 1.Bonais"," 2.Palito de helado de agua"," 3.Palito de helado de crema"," 4.Bombón helado con arequipe"," 5.Bombón helado con chispas de chocolate"," 6.Bombón helado con fresas"," 7.Medio litro de helado"]
+//let nombres=["Bonais","Palito de helado de agua","Palito de helado de crema","Bombón helado con arequipe","Bombón helado con chispas de chocolate","Bombón helado con fresas","Medio litro de helado"]
+let nombres=[" 1.Bonais"," 2.Palito de helado de agua"," 3.Palito de helado de crema"," 4.Bombón helado con arequipe"," 5.Bombón helado con chispas de chocolate"," 6.Bombón helado con fresas"," 7.Medio litro de helado"]
 let codigoHelados=[1,2,3,4,5,6,7]
 while(inicio==true){
 dinero=parseInt(prompt("Ingrese la cantidad de dinero"))
