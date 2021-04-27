@@ -79,17 +79,17 @@ if ((cliente=="MIGUEL"&&dinero==1000) || (cliente=="CARLOS"&&dinero==2000)||( cl
         }   
     }
     //console.log("max"+valorF)
-    console.log(`pudo comprar(${seleccion})`)
-    let vueltos
-    vueltos=dinero-max
-    console.log(`compro un (${max2}) por un valor de ${max} y le sobro ${vueltos}`)
+        // console.log(`pudo comprar(${seleccion})`)
+        // let vueltos
+        // vueltos=dinero-max
+        // console.log(`compro un (${max2}) por un valor de ${max} y le sobro ${vueltos}`)
 
 
 
 
         //seleccionar helado
 
-/*     while(inicio3==true){
+    while(inicio3==true){
 
     codigo=parseInt( prompt(`Puede comprar \n${seleccion}\nIngrese el codigo del producto que desea comprar`))
     let valida2=Number.isInteger(codigo)
@@ -115,7 +115,7 @@ if ((cliente=="MIGUEL"&&dinero==1000) || (cliente=="CARLOS"&&dinero==2000)||( cl
         alert("ingrese un codigo valido")
         inicio3=true
         }
-    } */
+    }
 }
 else{
     alert("Ese usurio no tiene ese dinero")
